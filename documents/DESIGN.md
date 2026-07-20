@@ -4,6 +4,6 @@
 
 ```mermaid
 flowchart TD
-    A[開始] --> B[作業する]
-    B --> C[終了]
+    subgraph 使用者
+        A([食材の仕入れ価格、内容量を登録])
 ```
