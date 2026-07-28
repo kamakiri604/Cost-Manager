@@ -59,8 +59,8 @@ stateDiagram-v2
 | 仕入れ価格 | purchase_price	| DECIMAL | 10,2 | 不可 | | - |
 | 内容量	| purchase_amount |	DECIMAL	| 10,2 | 不可 | | - |
 | 1gあたり原価 | unit_cost | DECIMAL | 10,4 | 不可 | | 0 |
-| 登録日時 | created_at | DATETIME | - | 不可 |
-| 更新日時 | updated_at | DATETIME | - | 不可 |
+| 登録日時 | created_at | DATETIME | - | 不可 | | 現在日時 |
+| 更新日時 | updated_at | DATETIME | - | 不可 | | 現在日時 |
 
 制約・インデックス
 
