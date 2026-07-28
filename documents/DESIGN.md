@@ -55,7 +55,7 @@ stateDiagram-v2
 | 論理名 | 物理名 | データ型 | 桁数 | NULL | キー | デフォルト |
 | --- | --- | --- | --- | --- | --- | --- |
 | 食材ID | ingredient_id | BIGINT | - | 不可 | PK | 自動採番 |
-| 食材名 | ingredient_name | VARCHAR	| 100 |	不可 | - |
+| 食材名 | ingredient_name | VARCHAR	| 100 |	不可 |　| - |
 | 仕入れ価格 | purchase_price	| DECIMAL | 10,2 | 不可 | - |
 | 内容量	| purchase_amount |	DECIMAL	| 10,2 | 不可 | - |
 | 1gあたり原価 | unit_cost | DECIMAL | 10,4 | 不可 | 0 |
