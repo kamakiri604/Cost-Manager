@@ -62,4 +62,9 @@ stateDiagram-v2
 | 登録日時 | created_at | DATETIME | - | 不可 |
 | 更新日時 | updated_at | DATETIME | - | 不可 |
 
+制約・インデックス
+
+- PRIMARY KEY (ingredient_id)
+- UNIQUE (ingredient_name) を推奨（同名食材の重複登録を防止する場合）
+
 <img width="360" height="132" alt="image" src="https://github.com/user-attachments/assets/cc754851-5c28-4a64-9401-68bb3677c00b" />
