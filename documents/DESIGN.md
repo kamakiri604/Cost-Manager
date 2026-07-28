@@ -78,8 +78,8 @@ stateDiagram-v2
 | 原価合計 | total_cost | DECIMAL | 10,2 | 不可 | | 0 |
 | 現在原価率 | current_cost_rate | DECIMAL | 5,2 | 不可 | | 0 |
 | 原価率超過フラグ | is_over_target | TINYINT | 1 | 不可 | | 0 |
-| 登録日時 | created_at | DATETIME | - | 不可 | 現在日時 |	
-| 更新日時 | updated_at | DATETIME | - | 不可 | 現在日時 |
+| 登録日時 | created_at | DATETIME | - | 不可 | | 現在日時 |	
+| 更新日時 | updated_at | DATETIME | - | 不可 | | 現在日時 |
 
 制約・インデックス
 
