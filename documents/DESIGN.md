@@ -42,4 +42,11 @@ stateDiagram-v2
 
 ## 4.テーブル定義書
 
+### テーブル一覧
+
+| テーブル名 | 概要 |
+| --- | --- |
+| ingredients | 食材 |
+| menu | メニュー |
+| menu_ingredients | メニュー構成 |
 <img width="360" height="132" alt="image" src="https://github.com/user-attachments/assets/cc754851-5c28-4a64-9401-68bb3677c00b" />
