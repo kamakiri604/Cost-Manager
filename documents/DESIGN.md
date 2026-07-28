@@ -104,8 +104,8 @@ stateDiagram-v2
 制約・インデックス
 
 - PRIMARY KEY (menu_ingredient_id)
-- FOREIGN KEY (menu_id) REFERENCES m_menu(menu_id) ON DELETE CASCADE
-- FOREIGN KEY (ingredient_id) REFERENCES m_ingredient(ingredient_id)
+- FOREIGN KEY (menu_id) 
+- FOREIGN KEY (ingredient_id) 
 - UNIQUE (menu_id, ingredient_id) (同一メニュー内で同一食材の重複行を許可しない)
 
 備考
