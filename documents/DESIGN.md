@@ -56,9 +56,9 @@ stateDiagram-v2
 | --- | --- | --- | --- | --- | --- | --- |
 | 食材ID | ingredient_id | BIGINT | - | 不可 | PK | 自動採番 |
 | 食材名 | ingredient_name | VARCHAR	| 100 |	不可 |　| - |
-| 仕入れ価格 | purchase_price	| DECIMAL | 10,2 | 不可 | - |
-| 内容量	| purchase_amount |	DECIMAL	| 10,2 | 不可 | - |
-| 1gあたり原価 | unit_cost | DECIMAL | 10,4 | 不可 | 0 |
+| 仕入れ価格 | purchase_price	| DECIMAL | 10,2 | 不可 | | - |
+| 内容量	| purchase_amount |	DECIMAL	| 10,2 | 不可 | | - |
+| 1gあたり原価 | unit_cost | DECIMAL | 10,4 | 不可 | | 0 |
 | 登録日時 | created_at | DATETIME | - | 不可 |
 | 更新日時 | updated_at | DATETIME | - | 不可 |
 
@@ -72,12 +72,12 @@ stateDiagram-v2
 | 論理名 | 物理名 | データ型 | 桁数 | NULL | キー | デフォルト |
 | --- | --- | --- | --- | --- | --- | --- |
 | メニューID | menu_id | BIGINT | - | 不可 | PK | 自動採番 |
-| メニュー名 | menu_name | VARCHAR | 100 | 不可 | - |
-| 販売価格 | selling_price | DECIMAL | 10,2 | 不可 | - |
-| 目標原価率 | target_cost_rate | DECIMAL | 5,2 | 不可 | - |
-| 原価合計 | total_cost | DECIMAL | 10,2 | 不可 | 0 |
-| 現在原価率 | current_cost_rate | DECIMAL | 5,2 | 不可 | 0 |
-| 原価率超過フラグ | is_over_target | TINYINT | 1 | 不可 | 0 |
+| メニュー名 | menu_name | VARCHAR | 100 | 不可 | | - |
+| 販売価格 | selling_price | DECIMAL | 10,2 | 不可 | | - |
+| 目標原価率 | target_cost_rate | DECIMAL | 5,2 | 不可 | | - |
+| 原価合計 | total_cost | DECIMAL | 10,2 | 不可 | | 0 |
+| 現在原価率 | current_cost_rate | DECIMAL | 5,2 | 不可 | | 0 |
+| 原価率超過フラグ | is_over_target | TINYINT | 1 | 不可 | | 0 |
 | 登録日時 | created_at | DATETIME | - | 不可 | 現在日時 |	
 | 更新日時 | updated_at | DATETIME | - | 不可 | 現在日時 |
 
