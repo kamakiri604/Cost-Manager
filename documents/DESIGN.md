@@ -98,8 +98,8 @@ stateDiagram-v2
 | 食材ID | ingredient_id | BIGINT | - | 不可 | FK | | - |	
 | 使用量 | usage_amount | DECIMAL | 10,2 | 不可 | | - |
 | 小原価 | line_cost | DECIMAL | 10,2 | 不可 | | 0 |
-| 登録日時 | created_at | DATETIME | - | 不可 | 現在日時 |
-| 更新日時 | updated_at | DATETIME | - | 不可 | 現在日時 |
+| 登録日時 | created_at | DATETIME | - | 不可 | | 現在日時 |
+| 更新日時 | updated_at | DATETIME | - | 不可 | | 現在日時 |
 
 制約・インデックス
 
