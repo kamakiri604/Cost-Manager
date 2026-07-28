@@ -91,6 +91,23 @@ stateDiagram-v2
 
 #### メニュー構成テーブル
 
+論理名	物理名	データ型	桁数	NULL	キー	デフォルト	備考
+メニュー構成ID	menu_ingredient_id	BIGINT	-	不可	PK	自動採番	行を一意に識別するID
+メニューID	menu_id	BIGINT	-	不可	FK	-	m_menu.menu_id を参照。どのメニューの構成かを示す
+食材ID	ingredient_id	BIGINT	-	不可	FK	-	m_ingredient.ingredient_id を参照。どの食材を使用するかを示す
+使用量	usage_amount	DECIMAL	10,2	不可		-	そのメニュー1食あたりの使用量（g）
+小原価	line_cost	DECIMAL	10,2	不可		0	usage_amount × m_ingredient.unit_cost で自動算出（円）
+登録日時	created_at	DATETIME	-	不可		現在日時	初回登録日時
+更新日時	updated_at	DATETIME	-	不可		現在日時	最終更新日時（編集のたびに更新）
 
+制約・インデックス
+
+- PRIMARY KEY (menu_ingredient_id)
+- FOREIGN KEY (menu_id) REFERENCES m_menu(menu_id) ON DELETE CASCADE
+- FOREIGN KEY (ingredient_id) REFERENCES m_ingredient(ingredient_id)
+- UNIQUE (menu_id, ingredient_id) (同一メニュー内で同一食材の重複行を許可しない)
+
+備考
+- どのメニューにどの食材を何g使用するかを1行1組で管理する中間テーブル。メニューの原価合計は、このテーブルの line_cost をメニューIDで合計して算出する。
 
 <img width="360" height="132" alt="image" src="https://github.com/user-attachments/assets/cc754851-5c28-4a64-9401-68bb3677c00b" />
