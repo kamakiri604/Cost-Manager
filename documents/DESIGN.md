@@ -65,6 +65,32 @@ stateDiagram-v2
 制約・インデックス
 
 - PRIMARY KEY (ingredient_id)
-- UNIQUE (ingredient_name) を推奨（同名食材の重複登録を防止する場合）
+- UNIQUE (ingredient_name)（同名食材の重複登録を防止する）
+
+#### メニューテーブル
+
+| 論理名 | 物理名 | データ型 | 桁数 | NULL | キー | デフォルト |
+| --- | --- | --- | --- | --- | --- | --- |
+| メニューID | menu_id | BIGINT | - | 不可 | PK | 自動採番 |
+| メニュー名 | menu_name | VARCHAR | 100 | 不可 | - |
+| 販売価格 | selling_price | DECIMAL | 10,2 | 不可 | - |
+| 目標原価率 | target_cost_rate | DECIMAL | 5,2 | 不可 | - |
+| 原価合計 | total_cost | DECIMAL | 10,2 | 不可 | 0 |
+| 現在原価率 | current_cost_rate | DECIMAL | 5,2 | 不可 | 0 |
+| 原価率超過フラグ | is_over_target | TINYINT | 1 | 不可 | 0 |
+| 登録日時 | created_at | DATETIME | - | 不可 | 現在日時 |	
+| 更新日時 | updated_at | DATETIME | - | 不可 | 現在日時 |
+
+制約・インデックス
+
+- PRIMARY KEY (menu_id)
+
+備考
+
+- 販売価格と目標原価率を保存し、使用食材から算出した原価合計・現在原価率・超過フラグをあわせて保持する。current_cost_rate が target_cost_rate を超えた時点で is_over_target を1に更新し、ホーム画面のNGバッジ・アラートバナー表示のトリガーとする。
+
+#### メニュー構成テーブル
+
+
 
 <img width="360" height="132" alt="image" src="https://github.com/user-attachments/assets/cc754851-5c28-4a64-9401-68bb3677c00b" />
